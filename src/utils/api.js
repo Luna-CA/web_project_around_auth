@@ -72,6 +72,6 @@ class Api {
   }
 }
 
-const api = new Api("https://se-register-api.en.tripleten-services.com/v1");
+const api = new Api("https://around-api.pt-br.tripleten-services.com/v1");
 
 export default api;
