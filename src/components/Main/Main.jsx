@@ -5,7 +5,7 @@ import CurrentUserContext from "../../contexts/CurrentUserContext";
 import EditProfile from "./components/Popup/components/EditProfile/EditProfile";
 import EditAvatar from "./components/Popup/components/EditAvatar/EditAvatar";
 import NewCard from "./components/Popup/components/NewCard/NewCard";
-import ImagePopup from "./components/Popup/components/ImagePopup/ImagePopup";
+import { ImagePopup } from "./components/Popup/components/ImagePopup/ImagePopup";
 import Card from "./components/Card/Card";
 
 export default function Main() {

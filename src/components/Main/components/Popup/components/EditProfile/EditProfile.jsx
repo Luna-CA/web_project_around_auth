@@ -6,12 +6,13 @@ export default function EditProfile(props) {
   const userContext = useContext(CurrentUserContext); // Obtém o objeto de usuário atual
   const { currentUser } = userContext;
 
-  const [name, setName] = useState("");
-  const [about, setAbout] = useState("");
+  // CERTO
+  const [name, setName] = useState(currentUser?.name || "");
+  const [about, setAbout] = useState(currentUser?.about || "");
 
   useEffect(() => {
-    setName(currentUser.name);
-    setAbout(currentUser.about);
+    setName(currentUser?.name || "");
+    setAbout(currentUser?.about || "");
   }, [currentUser]);
 
   function handleSubmit(e) {

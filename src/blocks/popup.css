@@ -74,17 +74,6 @@
   box-sizing: border-box;
 }
 
-.popup__close {
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-}
-
 .popup__icon {
   width: 120px;
   height: 120px;

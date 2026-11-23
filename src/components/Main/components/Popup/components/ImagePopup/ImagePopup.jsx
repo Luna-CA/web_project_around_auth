@@ -1,11 +1,10 @@
-import Popup from "../../Popup";
+export function ImagePopup({ card, isOpen, onClose }) {
+  if (!card) return null;
 
-export default function ImagePopup({ card, onClose }) {
   return (
-    <Popup onClose={onClose}>
-      <img className="popup__image" src={card.link} alt={card.name} />
-
+    <div className="popup__content popup__content_type_image">
+      <img src={card.link} alt={card.name} className="popup__image" />
       <p className="popup__caption">{card.name}</p>
-    </Popup>
+    </div>
   );
 }

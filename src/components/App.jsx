@@ -8,10 +8,11 @@ import Login from "./Login/Login.jsx";
 import Register from "./Register/Register.jsx";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute.jsx";
 import InfoTooltip from "./InfoTooltip/InfoTooltip.jsx";
-import EditAvatar from "./EditAvatar/EditAvatar.jsx";
-import EditProfile from "./EditProfile/EditProfile.jsx";
-import NewCard from "./NewCard/NewCard.jsx";
-import ImagePopup from "./ImagePopup/ImagePopup.jsx";
+
+import EditAvatar from "./Main/components/Popup/components/EditAvatar/EditAvatar.jsx";
+import EditProfile from "./Main/components/Popup/components/EditProfile/EditProfile.jsx";
+import NewCard from "./Main/components/Popup/components/NewCard/NewCard.jsx";
+import { ImagePopup } from "./Main/components/Popup/components/ImagePopup/ImagePopup.jsx";
 import api from "../utils/api.js";
 import * as auth from "../utils/auth.js";
 import CurrentUserContext from "../contexts/CurrentUserContext";
@@ -177,33 +178,6 @@ function App() {
         </Routes>
 
         <Footer />
-
-        <EditAvatar
-          isOpen={isEditAvatarOpen}
-          onClose={closeAllPopups}
-          onUpdateAvatar={handleUpdateAvatar}
-        />
-        <EditProfile
-          isOpen={isEditProfileOpen}
-          onClose={closeAllPopups}
-          onUpdateUser={handleUpdateUser}
-        />
-        <NewCard
-          isOpen={isAddPlaceOpen}
-          onClose={closeAllPopups}
-          onAddPlace={handleAddPlace}
-        />
-        <ImagePopup
-          card={selectedCard}
-          isOpen={!!selectedCard}
-          onClose={closeAllPopups}
-        />
-
-        <InfoTooltip
-          isOpen={isInfoTooltipOpen}
-          onClose={() => setIsInfoTooltipOpen(false)}
-          isSuccess={isSuccess}
-        />
       </div>
     </CurrentUserContext.Provider>
   );

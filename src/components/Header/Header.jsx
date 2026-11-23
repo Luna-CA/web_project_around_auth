@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import logo from "../../images/logo.svg";
 
 function Header({ loggedIn, userEmail, onLogout }) {
   return (
     <header className="header">
-      <img src="/images/logo.svg" alt="Logo" className="header__logo" />
+      <img src={logo} alt="Logo EUA Afora" className="header__logo" />
       {loggedIn ? (
         <div className="header__user">
           <span className="header__email">{userEmail}</span>
